@@ -1,5 +1,11 @@
-const App = () => {
-  return <div className="text-7xl">Hello World</div>
-}
+import BoardComponent from './components/BoardComponent';
 
-export default App
+const App = () => {
+  return (
+    <div>
+      <BoardComponent />
+    </div>
+  );
+};
+
+export default App;
