@@ -1,0 +1,47 @@
+{
+  "id": "board-1",
+  "name": "Project Tasks",
+  "columnList": [
+    {
+      "id": "col-1",
+      "name": "To Do",
+      "taskList": [
+        {
+          "id": "task-1",
+          "title": "Design homepage",
+          "description": "Create wireframes for the homepage",
+          "priority": "High",
+          "dueDate": "2023-12-15",
+          "createdAt": "2023-11-20T09:15:00Z"
+        },
+        {
+          "id": "task-2",
+          "title": "Setup database",
+          "description": "Initialize PostgreSQL database",
+          "priority": "Medium",
+          "dueDate": null,
+          "createdAt": "2023-11-18T14:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "col-2",
+      "name": "In Progress",
+      "taskList": [
+        {
+          "id": "task-3",
+          "title": "API endpoints",
+          "description": "Create user authentication endpoints",
+          "priority": "High",
+          "dueDate": "2023-12-01",
+          "createdAt": "2023-11-15T11:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": "col-3",
+      "name": "Done",
+      "taskList": []
+    }
+  ]
+}
