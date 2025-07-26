@@ -7,9 +7,12 @@ interface KabanState {
   tasks: Record<string, Task>;
 
   // Actions
+  // Task
   addTask: (columnId: string, task: Task) => void;
   updateTask: (taskId: string, updatedFields: Partial<Task>) => void;
   deleteTask: (taskId: string) => void;
+  // Column
+  addColumn: (name: string) => void;
 }
 
 export const useKabanStore = create<KabanState>(set => ({
@@ -94,6 +97,26 @@ export const useKabanStore = create<KabanState>(set => ({
       return {
         tasks: remainigTasks,
         columns: updateColumns,
+      };
+    });
+  },
+
+  addColumn: name => {
+    set(state => {
+      const column: Column = {
+        id: crypto.randomUUID(),
+        name: name,
+        taskIds: [],
+      };
+      return {
+        columns: {
+          ...state.columns,
+          [column.id]: column,
+        },
+        board: {
+          ...state.board,
+          columnOrder: [...state.board.columnOrder, column.id],
+        },
       };
     });
   },
